@@ -6,17 +6,49 @@
         xmlns:local="clr-namespace:Comida"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Background="SkyBlue">
+
+    <Border  Margin="10" Background="White" BorderBrush="Black" BorderThickness="1">
     <DockPanel>
 
-        <StackPanel DockPanel.Dock="Right" Width="200px">
+        <Border DockPanel.Dock="Right" Background="DarkGray" Padding="10" Width="200px" Margin="10" >
+        <StackPanel  >
+
+            <TextBlock>Nombre del plato</TextBlock>
+            <TextBox></TextBox>
+
+            <TextBlock>Foto del plato</TextBlock>
+            <TextBox></TextBox>
+
+            <TextBlock>Tipo de comida</TextBlock>
+                    <ComboBox ItemsSource="{Binding Path=TipoComida}"/>
+
+
+                    <GroupBox Header="Alérgenos" BorderBrush="Black">
+
+                <UniformGrid Columns="2" Rows="2">
+
+                    <CheckBox Content="Leche"></CheckBox>
+                    <CheckBox Content="Soja"></CheckBox>
+                    <CheckBox Content="Gluten"></CheckBox>
+                    <CheckBox Content="Sulfitos"></CheckBox>
+                    
+                    
+                </UniformGrid>
+                
+            </GroupBox>
+
+
+            <Button x:Name="limpiarSeleccionButton" Content="Limpiar selección" Width="100" HorizontalAlignment="Left" Margin="0,10,0,0"></Button>
             
         </StackPanel>
+        </Border>
 
-        <ListBox>
-            
+        <ListBox Margin="10">
+                
         </ListBox>
         
         
         
     </DockPanel>
+    </Border>
 </Window>
