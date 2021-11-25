@@ -43,8 +43,27 @@
         </StackPanel>
         </Border>
 
-        <ListBox Margin="10">
-                
+        <ListBox ItemsSource="{Binding Path=Comidas}">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel></WrapPanel>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+
+
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderThickness="2" BorderBrush="Black" Margin="10">
+                            <StackPanel>
+                                <TextBlock Text="{Binding Path=Nombre}" HorizontalAlignment="Center"></TextBlock>
+                                <StackPanel Width="200px" Height="200px">
+                                    <Image Source="{Binding Path=Imagen}" Width="200px" Height="200px" Stretch="UniformToFill"></Image>    
+                                </StackPanel>
+                                
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
         </ListBox>
         
         

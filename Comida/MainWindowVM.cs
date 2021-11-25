@@ -29,22 +29,31 @@ namespace Comida
         public ObservableCollection<Plato> Comidas
         {
             get { return comidas; }
-            set { Comidas = value;
+            set {comidas = value;
                 NotifyPropertyChanged("Comidas");
             }
         }
 
         public MainWindowVM()
         {
+            Comidas = Plato.GetSamples(@"C:\Users\alumno\Desktop\ut5_actv1_recursos\FotosPlatos");
+            CargarComida();
+
+
         }
 
         public MainWindowVM(ObservableCollection<Plato> comidas, ObservableCollection<String> tipoComida)
         {
             Comidas = comidas;
+            
+
+        }
+
+        public void CargarComida()
+        {
             tipoComida.Add("China");
             tipoComida.Add("Americana");
             tipoComida.Add("Mejicana");
-
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
