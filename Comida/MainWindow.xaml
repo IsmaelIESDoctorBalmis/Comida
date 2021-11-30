@@ -38,7 +38,7 @@
             </GroupBox>
 
 
-            <Button x:Name="limpiarSeleccionButton" Content="Limpiar selección" Width="100" HorizontalAlignment="Left" Margin="0,10,0,0"></Button>
+            <Button x:Name="limpiarSeleccionButton" Click="limpiarSeleccionButton_Click" Content="Limpiar selección" Width="100" HorizontalAlignment="Left" Margin="0,10,0,0"></Button>
             
         </StackPanel>
         </Border>
@@ -46,7 +46,7 @@
         <ListBox ItemsSource="{Binding Path=Comidas}">
                 <ListBox.ItemsPanel>
                     <ItemsPanelTemplate>
-                        <WrapPanel></WrapPanel>
+                        <WrapPanel Orientation="Vertical"></WrapPanel>
                     </ItemsPanelTemplate>
                 </ListBox.ItemsPanel>
 

@@ -56,6 +56,12 @@ namespace Comida
             tipoComida.Add("Mejicana");
         }
 
+        public void QuitarPlatoSeleccionado()
+        {
+            QuitarPlatoSeleccionado = null;
+        }
+
+
         public event PropertyChangedEventHandler PropertyChanged;
 
 
